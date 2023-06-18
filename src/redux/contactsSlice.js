@@ -32,7 +32,7 @@ import {
   getContactsThunk,
   postContactsThunk,
   deleteContactsThunk,
-} from './options';
+} from './metods';
 
 export const initialState = {
   contacts: {
