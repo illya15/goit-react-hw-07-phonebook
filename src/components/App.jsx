@@ -46,7 +46,7 @@ export const App = () => {
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
-             color: '#010101',
+            //  color: '#010101',
           }}
     >
       <h1>Phonebook</h1>
