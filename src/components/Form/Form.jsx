@@ -18,10 +18,13 @@ export const Form = () => {
       name: e.target.elements.name.value,
       phone: e.target.elements.number.value,
     };
-    const duplicate = items.find(item => item.name === newContact.name);
+    const duplicate = items.find(
+      item =>
+        item.name.toLocaleLowerCase() === newContact.name.toLocaleLowerCase()
+    );
 
     if (duplicate) {
-      alert('This name is already created in your contact book');
+      alert('A customer already exists');
       return;
     }
     dispatch(postContactsThunk(newContact));

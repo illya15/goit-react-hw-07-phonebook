@@ -1,7 +1,4 @@
-
-
 import { useDispatch, useSelector } from 'react-redux';
-
 import css from './ContactList.module.css';
 import { getContactsSelector } from 'redux/selector';
 import { deleteContactsThunk } from 'redux/metods';
@@ -27,7 +24,7 @@ export const ContactList = () => {
     <ul children={css.list}>
       {contacts.isLoading && <p>Loading...</p>}
       {contacts.error && (
-        <p>Oops!Something went wrong. Error: {contacts.error}</p>
+        <p>Oops! Error!!!: {contacts.error}</p>
       )}
       {filterName.map(item => (
         <li className={css.item} key={item.id}>
@@ -40,7 +37,7 @@ export const ContactList = () => {
             onClick={() => deleteContact(item.id)}
             disabled={contacts.isDeleting}
           >
-            {contacts.isDeleting ? 'Deleting...' : 'Delete'}
+            {contacts.isDeleting ? 'Deleting' : 'Delete'}
           </button>
         </li>
       ))}
